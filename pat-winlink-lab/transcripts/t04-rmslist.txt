@@ -1,0 +1,18 @@
+$ pat rmslist -m ardop -s     (ARDOP gateways, sorted by distance from locator FN31)
+(Pat downloads the current gateway catalog from winlink.org, then filters it.)
+callsign  [gridsq] dist    Az mode(s)              dial freq    center freq  qual url
+K2FAM     [FN21RA] 49     270 ARDOP 2000        7.101.30 MHz   7.102.80 MHz   N/A ardop:///K2FAM?bw=2000MAX&freq=7101.3
+K2FAM     [FN21RA] 49     270 ARDOP 2000       14.107.30 MHz  14.108.80 MHz   N/A ardop:///K2FAM?bw=2000MAX&freq=14107.3
+K2FAM     [FN21RA] 49     270 ARDOP 2000       18.107.10 MHz  18.108.60 MHz   N/A ardop:///K2FAM?bw=2000MAX&freq=18107.1
+K2FAM     [FN21RA] 49     270 ARDOP 2000       21.097.10 MHz  21.098.60 MHz   N/A ardop:///K2FAM?bw=2000MAX&freq=21097.1
+
+KG4OCM    [FN20MC] 132    220 ARDOP 2000        7.102.10 MHz   7.103.60 MHz   N/A ardop:///KG4OCM?bw=2000MAX&freq=7102.1
+KG4OCM    [FN20MC] 132    220 ARDOP 2000       10.146.50 MHz  10.148.00 MHz   N/A ardop:///KG4OCM?bw=2000MAX&freq=10146.5
+KG4OCM    [FN20MC] 132    220 ARDOP 2000       14.093.00 MHz  14.094.50 MHz   N/A ardop:///KG4OCM?bw=2000MAX&freq=14093
+KG4OCM    [FN20MC] 132    220 ARDOP 2000       18.107.00 MHz  18.108.50 MHz   N/A ardop:///KG4OCM?bw=2000MAX&freq=18107
+
+N3MEL-11  [FM29DX] 188    233 ARDOP 1000        3.596.00 MHz   3.597.50 MHz   N/A ardop:///N3MEL-11?bw=1000MAX&freq=3596
+N3MEL-11  [FM29DX] 188    233 ARDOP 1000        7.103.20 MHz   7.104.70 MHz   N/A ardop:///N3MEL-11?bw=1000MAX&freq=7103.2
+
+N1MVA     [FN42FW] 292     42 ARDOP 2000        3.594.50 MHz   3.596.00 MHz   N/A ardop:///N1MVA?bw=2000MAX&freq=3594.5
+N1MVA     [FN42FW] 292     42 ARDOP 2000        7.100.20 MHz   7.101.70 MHz   N/A ardop:///N1MVA?bw=2000MAX&freq=7100.2

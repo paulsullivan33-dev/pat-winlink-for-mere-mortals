@@ -1,0 +1,21 @@
+$ pat http
+2026/10/30 04:22:47 Starting HTTP service (http://localhost:18080)...
+
+$ curl -s -o /dev/null -w "%{http_code} -> %{redirect_url}" http://localhost:18080/
+302 -> http://localhost:18080/ui
+
+$ curl -sL http://localhost:18080/   (follow the redirect, read the title)
+HTTP 200, 26636 bytes
+<title>Pat - Mailbox</title>
+
+$ curl -s http://localhost:18080/api/status
+{"active_listeners":[],"connected":false,"dialing":false,"remote_addr":"","http_clients":[],"config_hash":"760e83a9e94a266fac6769a98fe0646e9b9e31ce"}
+
+
+$ curl -s http://localhost:18080/api/mailbox/out
+[{"MID":"DDHO73ZWOUYF","Date":"2026-10-30T04:22:00Z","From":{"Proto":"","Addr":"N0CALL"},"To":[{"Proto":"SMTP","Addr":"friend@example.com"}],"Cc":null,"Subject":"Weekly check-in schedule","Body":"","BodyHTML":"","Files":[],"P2POnly":false,"Unread":false}]
+
+
+$ curl -s http://localhost:18080/api/mailbox/out/DDHO73ZWOUYF
+{"MID":"DDHO73ZWOUYF","Date":"2026-10-30T04:22:00Z","From":{"Proto":"","Addr":"N0CALL"},"To":[{"Proto":"SMTP","Addr":"friend@example.com"}],"Cc":null,"Subject":"Weekly check-in schedule","Body":"Hello,\r\n\r\nThis is a test message written in the lab.\r\nIt waits in the outbox until the next connection sends it.\r\n","BodyHTML":"\u003cp\u003eHello,\n\u003c/p\u003e\u003cp\u003eThis is a test message written in the lab.\nIt waits in the outbox until the next connection sends it.\n\u003c/p\u003e","Files":[],"P2POnly":false,"Unread":false}
+

@@ -1,0 +1,54 @@
+$ printf body | pat compose friend@example.com -s "Weekly check-in schedule"
+Message posted
+
+$ find mailbox -type f
+mbox/N0CALL/out/DDHO73ZWOUYF.b2f
+
+$ cat mailbox/N0CALL/out/*.b2f     (the stored message, exactly as written)
+Mid: DDHO73ZWOUYF
+Body: 114
+Content-Transfer-Encoding: 8bit
+Content-Type: text/plain; charset=ISO-8859-1
+Date: 2026/10/30 04:22
+From: N0CALL
+Mbo: N0CALL
+Subject: Weekly check-in schedule
+To: SMTP:friend@example.com
+Type: Private
+
+Hello,
+
+This is a test message written in the lab.
+It waits in the outbox until the next connection sends it.
+
+$ pat read   (choose mailbox 1 = out, then message 0)
+0:in	1:out	2:sent	3:archive	
+Choose mailbox [n]: -------  ----------  -----------------------------  -----------  ----------------------------------  -----------------------
+ i        Flags       Subject                        From         Date                                To                    
+-------  ----------  -----------------------------  -----------  ----------------------------------  -----------------------
+  0                   Weekly check-in schedule       N0CALL       2026-10-30 04:22:00 +0000 UTC       friend@example.com    
+-------  ----------  -----------------------------  -----------  ----------------------------------  -----------------------
+
+Choose message [n]: ========================================
+MID:  DDHO73ZWOUYF
+Date: 2026-10-30 04:22:00 +0000 UTC
+From: N0CALL
+To: SMTP:friend@example.com
+Subject: Weekly check-in schedule
+
+Hello,
+
+This is a test message written in the lab.
+It waits in the outbox until the next connection sends it.
+
+Attachments:
+
+========================================
+
+Action [C,r,ra,f,e,d,q,?]: -------  ----------  -----------------------------  -----------  ----------------------------------  -----------------------
+ i        Flags       Subject                        From         Date                                To                    
+-------  ----------  -----------------------------  -----------  ----------------------------------  -----------------------
+  0                   Weekly check-in schedule       N0CALL       2026-10-30 04:22:00 +0000 UTC       friend@example.com    
+-------  ----------  -----------------------------  -----------  ----------------------------------  -----------------------
+
+Choose message [n]: 0:in	1:out	2:sent	3:archive	

@@ -1,0 +1,19 @@
+$ pat templates update
+2026/10/30 04:23:22 Updating form templates; current version is unknown
+2026/10/30 04:23:23 Updating forms via https://api.getpat.io/v1/forms/standard-templates/Standard_Forms_1.1.22.0.zip
+2026/10/30 04:23:25 Finished forms update to 1.1.22.0
+
+$ ls forms/ | head ; du -sh forms
+ARC Forms
+CA State Forms
+Canadian Forms
+Changelog.txt
+FEMA Forms
+FMRE Forms
+General Forms
+General Medical Forms
+HI State forms
+HICS Forms
+IARU Forms
+ICS USA Forms
+13M	forms

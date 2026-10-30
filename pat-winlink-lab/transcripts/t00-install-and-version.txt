@@ -1,0 +1,51 @@
+$ sha256sum pat_1.0.0_linux_amd64.tar.gz
+331e4700c9e8b44098d7173e448da53204f59720c6c19ebc903685666aa377f7  pat_1.0.0_linux_amd64.tar.gz
+
+$ tar -tzf pat_1.0.0_linux_amd64.tar.gz
+._pat_1.0.0_linux_amd64
+pat_1.0.0_linux_amd64/
+pat_1.0.0_linux_amd64/._pat
+pat_1.0.0_linux_amd64/pat
+
+$ pat version
+Pat v1.0.0 (2e6a8d1) linux/amd64 - go1.26.2
+
+$ pat --help
+Pat is a client for the Winlink 2000 Network.
+
+Usage:
+  ./pat-bin/pat_1.0.0_linux_amd64/pat [options] command [arguments]
+
+Commands:
+  init            Initial configuration setup.
+  configure       Open configuration file for editing.
+  connect         Connect to a remote station.
+  interactive     Run interactive mode.
+  http            Run http server for web UI.
+  compose         Compose a new message.
+  read            Read messages.
+  composeform     Post form-based report. (DEPRECATED)
+  position        Post a position report (GPSd or manual entry).
+  extract         Extract attachments from a message file.
+  rmslist         Print/search in list of RMS nodes.
+  updateforms     Download the latest form templates. (DEPRECATED)
+  templates       Manage message templates and HTML forms.
+  account         Get and set Winlink.org account settings.
+  mps             Manage message pickup stations.
+  version         Print the application version.
+  env             List environment variables.
+  help            Print detailed help for a given command.
+
+Options:
+      --config string      Path to config file. (default "/home/hatch/.config/pat/config.json")
+      --event-log string   Path to event log file. (default "/home/hatch/.local/state/pat/eventlog.json")
+      --forms string       Path to forms directory. (default "/home/hatch/.local/share/pat/Standard_Forms")
+      --ignore-busy        Don't wait for clear channel before connecting to a node.
+  -l, --listen string      Comma-separated list of methods to listen on (e.g. ardop,telnet,ax25).
+      --log string         Path to log file. The file is truncated on each startup. (default "/home/hatch/.local/state/pat/pat.log")
+      --mbox string        Path to mailbox directory. (default "/home/hatch/.local/share/pat/mailbox")
+      --mycall string      Your callsign (winlink user).
+      --prehooks string    Path to prehooks (default "/home/hatch/.config/pat/prehooks")
+      --radio-only         Radio Only mode (Winlink Hybrid RMS only).
+  -s, --send-only          Download inbound messages later, send only.
+

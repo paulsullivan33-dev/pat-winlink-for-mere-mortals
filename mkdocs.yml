@@ -1,0 +1,27 @@
+site_name: Pat (Winlink) for Mere Mortals
+site_description: Email that works when the internet does not. Pat is the open source Winlink client that holds your mailbox on your own machine and carries mail by internet, HF radio, packet and VARA, with the local half run for real and the connection chapters labelled as documented.
+site_url: https://paulsullivan33-dev.github.io/pat-winlink-for-mere-mortals/
+copyright: 'Part of <a href="https://paulsullivan33-dev.github.io/mere-mortals/">For Mere Mortals</a> · Text CC BY 4.0, code MIT'
+
+# Guides live at the repo root (nice for GitHub browsing).
+# The deploy workflow copies them into docs/ before building.
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - What Winlink and Pat Are: what-winlink-and-pat-are.md
+  - The Moving Parts: the-moving-parts.md
+  - Installing Pat: installing-pat.md
+  - Your Account and Config: your-account-and-config.md
+  - The Web Mailbox: the-web-mailbox.md
+  - Composing and Reading: composing-and-reading.md
+  - Connecting by Telnet: connecting-by-telnet.md
+  - Connecting by Radio: connecting-by-radio.md
+  - Finding a Gateway: finding-a-gateway.md
+  - Forms and Position Reports: forms-and-position-reports.md
+  - Listening and Peer to Peer: listening-and-peer-to-peer.md
+  - Limits: limits.md
+  - Troubleshooting: troubleshooting.md
+  - Glossary: glossary.md
+  - Writing Criteria: criteria.md

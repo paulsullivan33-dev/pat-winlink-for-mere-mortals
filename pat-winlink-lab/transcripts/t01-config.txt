@@ -1,0 +1,115 @@
+$ pat configure        (first run: no config file exists yet)
+Hello there! Do you want to be guided through the basic setup?
+Run 'pat init'? (Y/n): n
+(Answering n skips the guided setup. Pat writes a complete default
+ config.json either way; the lab then edited it in a text editor.)
+
+$ cat config.json      (the default file, exactly as Pat wrote it)
+{
+  "mycall": "",
+  "secure_login_password": "",
+  "auxiliary_addresses": [],
+  "locator": "",
+  "auto_download_size_limit": -1,
+  "service_codes": [
+    "PUBLIC"
+  ],
+  "http_addr": "localhost:8080",
+  "motd": [
+    "Open source Winlink client - getpat.io"
+  ],
+  "connect_aliases": {
+    "telnet": "telnet://{mycall}:CMSTelnet@cms.winlink.org:8772/wl2k"
+  },
+  "listen": [],
+  "hamlib_rigs": {},
+  "ax25": {
+    "engine": "linux",
+    "rig": "",
+    "beacon": {
+      "every": 3600,
+      "message": "Winlink P2P",
+      "destination": "IDENT"
+    }
+  },
+  "ax25_linux": {
+    "port": "wl2k"
+  },
+  "agwpe": {
+    "addr": "localhost:8000",
+    "radio_port": 0
+  },
+  "serial-tnc": {
+    "path": "/dev/ttyUSB0",
+    "serial_baud": 9600,
+    "hbaud": 1200,
+    "type": "kenwood"
+  },
+  "ardop": {
+    "addr": "localhost:8515",
+    "arq_bandwidth": {
+      "Forced": false,
+      "Max": 500
+    },
+    "connect_requests": 10,
+    "rig": "",
+    "ptt_ctrl": false,
+    "beacon_interval": 0,
+    "cwid_enabled": true
+  },
+  "pactor": {
+    "path": "/dev/ttyUSB0",
+    "baudrate": 57600,
+    "rig": "",
+    "custom_init_script": ""
+  },
+  "telnet": {
+    "listen_addr": ":8774",
+    "password": ""
+  },
+  "varahf": {
+    "addr": "localhost:8300",
+    "bandwidth": 2300,
+    "rig": "",
+    "ptt_ctrl": false
+  },
+  "varafm": {
+    "addr": "localhost:8300",
+    "rig": "",
+    "ptt_ctrl": false
+  },
+  "gpsd": {
+    "enable_http": false,
+    "allow_forms": false,
+    "use_server_time": false,
+    "update_locator": false,
+    "addr": "localhost:2947"
+  },
+  "schedule": {},
+  "version_reporting_disabled": false
+}
+
+The lab changed exactly three fields:
+  "mycall":    ""               -> "N0CALL"          (placeholder call sign)
+  "locator":   ""               -> "FN31"            (a generic grid square)
+  "http_addr": "localhost:8080" -> "localhost:18080" (8080 was busy on the lab machine)
+
+$ pat env        (Pat confirms what it loaded)
+PAT_MYCALL="N0CALL"
+PAT_LOCATOR="FN31"
+PAT_VERSION="1.0.0"
+PAT_ARCH="amd64"
+PAT_OS="linux"
+PAT_MAILBOX_PATH="mbox"
+PAT_CONFIG_PATH="cfg/config.json"
+PAT_LOG_PATH="state/pat.log"
+PAT_EVENTLOG_PATH="state/eventlog.json"
+PAT_FORMS_PATH="forms"
+PAT_DEBUG=""
+PAT_WEB_DEV_ADDR=""
+ARDOP_DEBUG=""
+PACTOR_DEBUG=""
+AGWPE_DEBUG=""
+VARA_DEBUG=""
+GZIP_EXPERIMENT="1"
+ARDOP_FSKONLY_EXPERIMENT=""
